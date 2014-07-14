@@ -3873,6 +3873,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 18px;
   line-height: 20px;
   height: 50px;
+  color: white;
+    
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4081,11 +4083,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #05abf2;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777777;
+  color: white;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -4987,6 +4989,7 @@ a.list-group-item-danger.active:focus {
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  background: linear-gradient(to right, #ed5c5c , #c23030);
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -5006,6 +5009,7 @@ a.list-group-item-danger.active:focus {
   border-top: 1px solid #dddddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+    background: linear-gradient(to right, #ed5c5c , #c23030); /* Standard syntax */
 }
 .panel > .list-group {
   margin-bottom: 0;
