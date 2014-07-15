@@ -8,6 +8,7 @@ padding-top:0;
 
 #sidebar{
 position: inherit;
+<<<<<<< HEAD
 }
 
 .avatar-small img {
@@ -28,6 +29,8 @@ height: 40px;
 #TrainigArea{
     float:left;
     padding-top: 6px;
+=======
+>>>>>>> 1356213574b97c108dfdfc9514722fa73612bef6
 }
 
 
