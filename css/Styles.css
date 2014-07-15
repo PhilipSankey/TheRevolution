@@ -8,7 +8,7 @@ padding-top:0;
 
 #sidebar{
 position: inherit;
-<<<<<<< HEAD
+background-color: white
 }
 
 .avatar-small img {
@@ -29,8 +29,6 @@ height: 40px;
 #TrainigArea{
     float:left;
     padding-top: 6px;
-=======
->>>>>>> 1356213574b97c108dfdfc9514722fa73612bef6
 }
 
 
@@ -43,3 +41,7 @@ position: fixed;
   height: 23px;
 }
 
+#customDropDown {
+left: 0;
+right: auto;
+}

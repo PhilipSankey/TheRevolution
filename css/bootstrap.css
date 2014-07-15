@@ -891,11 +891,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #EEE;
 }
 input,
 button,
@@ -1908,6 +1908,7 @@ pre code {
   }
   .col-lg-9 {
     width: 75%;
+      
   }
   .col-lg-8 {
     width: 66.66666667%;
@@ -4983,6 +4984,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-body {
   padding: 15px;
+  background-color: white;
 }
 .panel-heading {
   padding: 10px 15px;
@@ -5176,7 +5178,7 @@ a.list-group-item-danger.active:focus {
   border-bottom: 1px solid #dddddd;
 }
 .panel-default {
-  border-color: #dddddd;
+  border-color: #c23030;
 }
 .panel-default > .panel-heading {
   color: #333333;
