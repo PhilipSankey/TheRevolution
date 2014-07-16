@@ -3,64 +3,129 @@
 
 <head>
     <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-    <title>Basics - Revolution</title>
+    <title>Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
     <link href="css/bootstrap.css" rel="styleSheet" />
     <link href="css/styles.css" rel="styleSheet" />
-    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+
 </head>
 
 <body>
-    
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">revolution</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">Learn</a></li>
-                    <li><a href="#contact">Immerse</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PhilipSankey <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu" id="customDropDown">
-                            <li class="dropdown">
-                                <a href="#">Profile</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">Optymyze</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">FOX</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">Products</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                      <li role="presentation" class="dropdown-header">Dropdown header</li>
-                      ...
-                      <li role="presentation" class="divider"></li>
-                      <li role="presentation" class="dropdown-header">Dropdown header</li>
-                      ...
-                    </ul>
-            </div>
-          <!--/.nav-collapse -->
-        </div>
-    </div>
 
+    <body>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">#Revolution</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right visible-lg">
+                        <div class="pull-left" id="circletag">
+                        </div>
+                        <div id="TrainigArea">
+                            <img src="http://www.advendio.com/wp-content/uploads/2014/02/salesforceAppLogo.png" width="50" height="30">
+                        </div>
+                        </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">PhilipSankey <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu" id="customDropDown">
+                                <li class="dropdown">
+                                    <a href="#">Profile</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Optymyze</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">FOX</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Products</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+      <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/stickyMojo.js"></script>
+        <script src="js/bootstrap.js"></script>
+
+        <script>
+            $(window).resize(function () {
+                $('#sidebar').css({
+                    width: $('#wrapper').width()
+                });
+            });
+
+            $(window).resize(function () {
+                $("#sidebar").css({
+                    width: $('#wrapper').width()
+                })
+            });
+
+            $(window).scroll(function () {
+                $('#sidebar').css({
+                    position: 'fixed',
+                    width: $('#wrapper').width()
+                });
+            });
+
+            $(function () {
+                $('.dropdown').hover(function () {
+                    $(this).toggleClass('open');
+                });
+            });
+            
+            
+            
+             $(function () {
+                $('.locked').hover(function () {
+                    $(this).toggleClass('.locked');
+                    $(".locked").children("img").attr("src","css/lock.png")
+                });
+            });
+        </script>
     </body>
 
 </html>
