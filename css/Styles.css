@@ -60,11 +60,10 @@ right: auto;
 	width: 150px;
 	height: 150px;
 	line-height: 150px;
-	background-color: #333;
 	border-radius: 100%;
 	text-align: center;
 	vertical-align: middle;
-	margin: 0 auto 50px auto;
+	margin: 0 auto 0 auto;
 	-webkit-transition: all .5s ease;
 	-moz-transition: all .5s ease;
 	-o-transition: all .5s ease;
@@ -83,7 +82,41 @@ right: auto;
 	-ms-transform: rotate(360deg);
 	transform: rotate(360deg);
 }
+
+.locked{
+    width: 150px;
+	height: 150px;
+	line-height: 150px;
+	border-radius: 100%;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0 auto 0 auto;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+.circle-icon {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.locked:hover {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+   
+}
  
+
+.centered{text-align:center;}
+
 @media only screen and (max-width: 1023px) {
  
 	.home-section-2 .one-third {
@@ -95,5 +128,3 @@ right: auto;
 	}
  
 }
-
-

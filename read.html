@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
     <link href="css/bootstrap.css" rel="styleSheet" />
     <link href="css/styles.css" rel="styleSheet" />
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+
 </head>
 
 <body>
@@ -33,7 +34,6 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a>
                         </li>
-
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
@@ -96,54 +96,87 @@
 
                 <div class="col-lg-9">
 
-                    <div class="panal panal-default ">
-
-                        <div class="panal-body">
-
-                            <div class="panel-heading" id="#grad">
-                                <h3 style="color: white">Salesforce Training </h3> 
-                            </div>
+                    <div class="panel panel-default">
 
 
-
-                            <div class="panal panal-default">
-
-                                <div class="panal-body">
-
-                                    <div class="page-header">
-
-                                    </div>
-                                    
-
-                                            <div class="one-third first">
-                                                <a href="#">
-                                                    <div class="circle-icon"><i class="fa fa-check-square fa-2x"></i></div>
-                                                </a>
-
-
-                                            </div>
-
-                                            <div class="one-third">
-                                                <a href="#">
-                                                    <div class="circle-icon"><i class="fa fa-shopping-cart fa-2x"></i>
-                                                    </div>
-                                                </a>
-
-
-                                            </div>
-
-                                            <div class="one-third">
-                                                <a href="#">
-                                                    <div class="circle-icon"><i class="fa fa-phone fa-2x"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                    
-                                </div>
-                            </div>
-
+                        <div class="panel-heading" id="#grad">
+                            <h3 style="color: white">Salesforce Training </h3> 
                         </div>
 
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <table class="table table-condensed">
+
+                                    <tbody>
+                                        <tr>
+                                            <td colspan = 2>
+                                                <a href="#">
+                                                    <div class="circle-icon" style="background-color:#1caff6">
+                                                        <img src=".\svg\administration1.svg" id="#icon1" width="100">
+                                                    </div>
+                                                    <div class="centered">
+                                                        Basics 1
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle-icon" style="background-color:#dd381d">
+                                                        <img src=".\svg\businessman158.svg" id="#icon1" width="100">
+                                                        </i>
+                                                    </div>
+                                                    <div class="centered">
+                                                        Basics 2
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle-icon" style="background-color:#dd381d">
+                                                        <img src=".\svg\sales1.svg" id="#icon1" width="100">
+                                                        </i>
+                                                    </div>
+                                                    <div class="centered">
+                                                        Basics 3
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <a href="#">
+                                                    <div class="circle-icon" style="background-color:#1caff6">
+                                                        <img src=".\svg\administration1.svg" id="#icon1" width="100">
+                                                    </div>
+                                                    <div class="centered">
+                                                        Basics 1
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan = 2>
+                                                <a href="#">
+                                                    <div class="locked" style="background-color:grey">
+                                                        <img src=".\svg\two218.svg" id="#icon1" width="100">
+                                                    </div>
+                                                    <div class="centered">
+                                                        Locked
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                    
+                                    </tbody>
+                                </table>
+                                
+
+                            </div>
+                        </div>
 
                         <div class="navbar navbar-default navbar-fixed-bottom visible-lg" style="color: gray">
                             <div class="container">
@@ -156,9 +189,8 @@
                 <div class="col-lg-3 pull-right visible-lg" id="wrapper">
                     <div class="panel panel-default" id="sidebar">
                         <div class="panel-heading" id="#grad">
-                            <i class="fa fa-bell fa-fw"></i>
-                            <h4 style="color:white">Salesforce Progress</h4>
-                            <img src="http://www.advendio.com/wp-content/uploads/2014/02/salesforceAppLogo.png" width="50" height="30" id="Area">
+                            <h4 style="color:white ;padding-bottom:2.91%">Salesforce Progress <img src="http://www.advendio.com/wp-content/uploads/2014/02/salesforceAppLogo.png" width="50" height="30" id="Area"></h4>
+
                         </div>
                         <div class="panel-body" id="main">
                             <h4>Progress</h4>
@@ -291,6 +323,13 @@
             $(function () {
                 $('.dropdown').hover(function () {
                     $(this).toggleClass('open');
+                });
+            });
+            
+             $(function () {
+                $('.locked').hover(function () {
+                    $(this).toggleClass('.locked');
+                    $(".locked").children("img").attr("src","css/lock.png")
                 });
             });
         </script>
