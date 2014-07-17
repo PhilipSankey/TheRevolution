@@ -97,14 +97,6 @@ right: auto;
 	transition: all .5s ease;
 }
 
-.circle-icon {
-	-webkit-transform: rotate(360deg);
-	-moz-transform: rotate(360deg);
-	-o-transform: rotate(360deg);
-	-ms-transform: rotate(360deg);
-	transform: rotate(360deg);
-}
-
 .locked:hover {
 	-webkit-transform: rotate(360deg);
 	-moz-transform: rotate(360deg);
@@ -114,7 +106,6 @@ right: auto;
    
 }
  
-
 .centered{text-align:center;}
 
 @media only screen and (max-width: 1023px) {
