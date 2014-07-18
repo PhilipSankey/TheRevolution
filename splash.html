@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,54 +28,153 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="site-wrapper">
 
-      <div class="site-wrapper-inner">
+        <div class="site-wrapper-inner">
 
-        <div class="cover-container">
+            <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand"><link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>revolution</link></h3>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Learn</a></li>
-                <li><a href="#">Immerse</a></li>
-              </ul>
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand"><link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>revolution</link></h3>
+                        <ul class="nav masthead-nav">
+                            <li class="active"><a href="#">Home</a>
+                            </li>
+                            <li><a href="#">Learn</a>
+                            </li>
+                            <li><a href="#">Immerse</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <h1 class="cover-heading">It's a revolution.</h1>
+                    <p class="lead">
+                        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>The power of business software at your fingertips. Track and improve on your usage of the software necessary for your career.
+                        <br>Are you ready for the learning revolution?</link>
+                    </p>
+                    <p class="lead" id="small">
+                        <button class="btn btn-lg btn-default" data-toggle="modal" data-target="#signup">
+                            Sign Up
+                        </button>
+                        <br>
+                        <a href="#">Log In</a>
+                    </p>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>Innovation Challenge Project for <a href="http://unum.com">Unum</a>
+                            <br>Philip Sankey, Justin Conant, Anqi Cong, Breanna George, &amp; Rich Roberts.</p>
+                    </div>
+                </div>
 
             </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">It's a revolution.</h1>
-            <p class="lead"><link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>The power of business software at your fingertips. Track and improve on your usage of the software necessary for your career.<br>Are you ready for the learning revolution?</link></p>
-            <p class="lead" id="small">
-              <a href="read.html" class="btn btn-lg btn-default">Sign Up</a><br/>
-              <a href="#">Log In</a></p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Innovation Challenge Project for <a href="http://unum.com">Unum</a>
-                <br>
-                Philip Sankey, Justin Conant, Anqi Cong, Breanna George, &amp; Rich Roberts.</p>
-            </div>
-          </div>
 
         </div>
 
-      </div>
-
     </div>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirm">
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">Check me out
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-lg btn-default" data-dismiss="modal" data-toggle="modal" data-target="#next">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="next" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <select class="form-control">
+                            <option>Sales Rep</option>
+                            <option>Under Writer</option>
+                            <option>Sales Co-ordinator</option>
+                            <option>...</option>
+                            <option>...</option>
+                        </select>
+                    </form>
+                    <br>
+                    <form role="form">
+                        <div class="form-group">
+                            <select multiple class="form-control">
+                                <option>
+                                    < 1hr a Day</option>
+                                        <option>1-3hrs</option>
+                                        <option>3-6hrs</option>
+                                        <option>6+ hrs</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Create Account</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-  </body>
+
+</body>
+
 </html>

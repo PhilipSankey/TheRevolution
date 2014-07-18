@@ -131,3 +131,11 @@ right: auto;
 .body {
   top: 150px;
 }
+
+.footer {
+  position: static;
+  margin-top: 40px; 
+  background-color:#05abf2;
+   
+  padding-bottom: 0px;
+} 
