@@ -120,16 +120,25 @@ right: auto;
  
 }
 
-#bg {
-  position: fixed; 
-  top: 125px; 
-  left: 0; 
+.frame {
+  position: fixed;
+  top: 125px;
+  min-width: 768px;
+  min-height: 800px;
   width: 100%;
-  box-shadow: 0 0 3px black;
+  
 }
 
-.body {
-  top: 150px;
+.dirbar {
+  display: none;
+  height: 200px;
+  color: red;
+  background-color: red;
+}   
+
+#headerBar {
+    height: 200px;
+    background: blue
 }
 
 .footer {
