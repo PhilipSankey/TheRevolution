@@ -45,9 +45,6 @@
                         <div id="TrainigArea">
                             <img src="http://www.advendio.com/wp-content/uploads/2014/02/salesforceAppLogo.png" width="50" height="30">
                         </div>
-                        </li>
-                    </ul>
-                    </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -372,7 +369,10 @@
 
             $(function () {
                 $('.locked').hover(function () {
-                    $(".locked").children("img").attr("src", "css/lock.png")
+                    originalImg = $(this).children("img").attr("src");
+                    $(this).children("img").attr("src", "css/lock.png");
+                },function () {
+                    $(this).children("img").attr("src", originalImg);
                 });
             });
         </script>

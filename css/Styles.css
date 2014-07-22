@@ -143,8 +143,10 @@ right: auto;
 
 .footer {
   position: static;
-  margin-top: 40px; 
-  background-color:#05abf2;
-   
-  padding-bottom: 0px;
+width: 100%;
+bottom: 0px;
+/* margin-top: 40px; */
+/* margin: 20px; */
+background-color: #05abf2;
+/* padding-bottom: 0px; */
 } 

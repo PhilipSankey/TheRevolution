@@ -63,7 +63,7 @@
                             Sign Up
                         </button>
                         <br>
-                        <a href="#">Log In</a>
+                        <a href="#" data-toggle="modal" data-target="#login">Log In</a>
                     </p>
                 </div>
 
@@ -177,24 +177,48 @@
                                         <option>Very</option>
                                         <option>Not Really</option>
                                         <option>uhhmmm...</option>
-
                             </select>
                         </div>
                         <div class="form-group">
-
                         </div>
-
                     </form>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary"><a href="">Create Account</a></button>
+                <button type="button" class="btn btn-primary"><a href="blankAcc.html">Create Account</a></button>
+            </div>
+        </div>
+    </div>
+<!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="color:black">Login</h4>
+                </div>
+                <div class="modal-body">
+                     <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="color:black">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" style="color:black">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><a href="read.html">Login</a></button>
             </div>
         </div>
     </div>
     </div>
-
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <!-- Bootstrap core JavaScript

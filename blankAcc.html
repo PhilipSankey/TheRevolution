@@ -284,6 +284,7 @@
         <script src="js/bootstrap.js"></script>
 
         <script>
+            var originalImg;
             $(window).resize(function () {
                 $('#sidebar').css({
                     width: $('#wrapper').width()
@@ -312,7 +313,10 @@
 
             $(function () {
                 $('.locked').hover(function () {
-                    $(this).children("img").attr("src", "css/lock.png")
+                    originalImg = $(this).children("img").attr("src");
+                    $(this).children("img").attr("src", "css/lock.png");
+                },function () {
+                    $(this).children("img").attr("src", originalImg);
                 });
             });
         </script>
