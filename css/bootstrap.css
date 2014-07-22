@@ -5011,6 +5011,7 @@ a.list-group-item-danger.active:focus {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   background: linear-gradient(to right, #ed5c5c , #c23030);
+    height: 80px;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -5902,6 +5903,7 @@ button.close {
     bottom: 20px;
   }
 }
+
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
