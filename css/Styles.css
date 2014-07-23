@@ -26,6 +26,7 @@ height: 40px;
     background-image: url("large.jpg");
 }
 
+
 #TrainigArea{
     float:left;
     padding-top: 6px;
@@ -97,7 +98,7 @@ right: auto;
 	transition: all .5s ease;
 }
 
-.locked:hover {
+.locked:hover{
 	-webkit-transform: rotate(360deg);
 	-moz-transform: rotate(360deg);
 	-o-transform: rotate(360deg);

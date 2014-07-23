@@ -116,7 +116,7 @@
                                                         <img src=".\svg\businessman158.svg" id="#icon1" width="100">
                                                         </i>
                                                     </div>
-                                                    <div class="centered">
+                                                    <div class="centered locked-text">
                                                         Basics 2
                                                     </div>
                                                 </a>
@@ -304,6 +304,7 @@
                 });
             });
 
+
             $(function () {
                 $('.dropdown').hover(function () {
                     $(this).toggleClass('open');
@@ -317,6 +318,17 @@
                     $(this).children("img").attr("src", "css/lock.png");
                 },function () {
                     $(this).children("img").attr("src", originalImg);
+                });
+            });
+            
+             $(function () {
+                $('.locked-text').hover(function () {
+                    originalImg = $(this).siblings().children("img").attr("src");
+                    $(this).siblings().children("img").attr("src", "css/lock.png");
+                    
+                    
+                },function () {
+                    $(this).siblings().children("img").attr("src", originalImg);
                 });
             });
         </script>

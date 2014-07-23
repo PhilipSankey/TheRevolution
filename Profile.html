@@ -90,13 +90,13 @@
 
 
                         <div class="panel-heading" id="#grad">
-                            <h1 class="visible-lg hidden-md" style="color: white" >Salesforce: Achievements</h1> 
-                            <h2 class="hidden-lg " style="color: white" >Achievements</h2>
+                            <h1 class="visible-lg hidden-md" style="color: white">Salesforce: Achievements</h1> 
+                            <h2 class="hidden-lg " style="color: white">Achievements</h2>
                         </div>
 
                         <div class="panel panel-default">
                             <div class="panel-body">
-                                
+
                                 <table class="table table-hover">
 
                                     <tbody>
@@ -171,13 +171,13 @@
                         </div>
                         <div class="panel-body" id="main">
 
-                            <img src="trophy.png" id="Area">
 
-                            <div style="position: absolute; top: 142px; left: 136px;">
-                                <h1 style="font-size;40px">3</h1>
+
+                            <div style="text-align: center">
+                                <img src="trophy.png" id="Area">
                             </div>
 
-                            <h4>Progress</h4>
+                            <h4 style="text-align:center">Progress</h4>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria- valuemax="100" style="width: 40%">
                                     <span>40% Complete</span>
@@ -194,18 +194,18 @@
 
                         </div>
                         <div class="panel-body" id="main">
-
-                            <img src="trophy.png" id="Area">
-
+                            <div id="imgContainer" style="text-align:center;">
+                                <img src="trophy.png" id="Area">
+                            </div>
                             <div style="position: absolute; top: 142px; left: 136px;">
-                                <h1 style="font-size;40px">3</h1>
                             </div>
 
-                            <h4>Progress</h4>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria- valuemax="100" style="width: 40%">
-                                    <span>40% Complete</span>
-                                </div>
+
+                        </div>
+                        <h4 style="text-align: center">Progress</h4>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria- valuemax="100" style="width: 40%">
+                                <span>40% Complete</span>
                             </div>
                         </div>
                     </div>
@@ -247,11 +247,11 @@
                 });
             });
 
-             $(function () {
+            $(function () {
                 $('.locked').hover(function () {
                     originalImg = $(this).children("img").attr("src");
                     $(this).children("img").attr("src", "css/lock.png");
-                },function () {
+                }, function () {
                     $(this).children("img").attr("src", originalImg);
                 });
             });

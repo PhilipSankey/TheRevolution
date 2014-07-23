@@ -258,7 +258,7 @@
                                             Breanna George
                                         </td>
                                         <td>
-                                            23
+                                            24
                                         </td>
                                     </tr>
                                     <tr class="warning">
@@ -269,7 +269,7 @@
                                             Anqi Cong
                                         </td>
                                         <td>
-                                            24
+                                            23
                                         </td>
                                     </tr>
                                     <tr class="info">
@@ -370,6 +370,15 @@
             $(function () {
                 $('.locked').hover(function () {
                     originalImg = $(this).children("img").attr("src");
+                    $(this).children("img").attr("src", "css/lock.png");
+                },function () {
+                    $(this).children("img").attr("src", originalImg);
+                });
+            });
+            
+            $(function () {
+                $('.locked-text').hover(function () {
+                    originalImg = $(this.closest()).children("img").attr("src");
                     $(this).children("img").attr("src", "css/lock.png");
                 },function () {
                     $(this).children("img").attr("src", originalImg);
