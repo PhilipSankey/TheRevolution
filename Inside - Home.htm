@@ -1,0 +1,1220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0014)http://inside/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+   var _U = "undefined";
+   var g_HttpRelativeWebRoot = "/stellent/";
+   var SSContributor = false;
+   var SSForceContributor = false;
+   var SSHideContributorUI = false;
+   var ssUrlPrefix = "/";
+   var ssUrlType = "1";
+   var ssDomainNum = "bafef2b4";
+   var g_navNode_Path = new Array();
+       g_navNode_Path[0] = '586';
+   var g_ssSourceNodeId = "586";
+   var g_ssSourceSiteId = "inside";
+</script>
+<script id="SSNavigationFunctionsScript" type="text/javascript" src=".everything/sitenavigationfunctions.js"></script><style type="text/css"></style>
+<script id="SSNavigationScript" type="text/javascript" src=".everything/sitenavigation.js"></script>
+
+<script type="text/javascript">
+	var g_strLanguageId = "en";
+</script>
+	<script type="text/javascript" src=".everything/wcm.toggle.js"></script>
+	<script type="text/javascript" src=".everything/ssajax.js"></script>
+
+
+  	<title>Inside - Home</title>
+  	<script id="ssInfo" type="text/xml" warning="DO NOT MODIFY!">
+  		<ssinfo >
+  		</ssinfo>
+  	</script>
+  	<link rel="stylesheet" type="text/css" href="./Inside - Home_files/css_inside_main.css">
+
+  	<meta name="GENERATOR" content="MSHTML 8.00.7600.16766">
+  	
+<script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script></head>
+
+<body>
+  <div class="MainContainer">
+    <!--MainContainer Starts -->  <script src=".everything/script_inside_globalsearch.js" type="text/javascript"></script>
+  <script language="javascript">
+  </script>
+  
+  <div class="Header">
+    <!--Header Starts -->
+    <div class="Logo">
+    	
+	<a target="_self" href="./Inside - Home_files/Inside - Home.htm"><img border="0" alt="Inside Unum" src="./Inside - Home_files/img_inside_logo_unum.gif"></a>
+
+ 
+	</div>
+    <div class="GlobalBox">
+      	<table id="GlobalSearch" cellspacing="0" cellpadding="3" align="right" border="0" valign="top">
+        	<tbody>
+          	<tr>
+            	<td class="primaryLabel"><b>Find People:</b></td>
+	
+            	<td><input class="searchBox" onkeypress="javascript:return CheckForEnter(event, &#39;https://hrapps/HumanResources/Directory/WebSite/&#39;, &#39;EmployeeFinderText&#39;);" id="EmployeeFinderText" onfocus="javascript:this.value=&#39;&#39;" value="Last name, First" name="EmployeeFinderText"></td>
+	
+            	<td><a id="EmpFinderBtn" href="javascript: DisplayEmployeeFinder('https://hrapps/HumanResources/Directory/WebSite/', 'EmployeeFinderText');"><img alt="Search" src="./Inside - Home_files/IMG_Inside_btn_search_arrow.gif" border="0"></a></td>
+	
+            	<td class="primaryLabel" style="PADDING-LEFT: 10px"><b>Search:</b></td>
+	
+            	<td class="radioLabel">Inside</td>
+	
+            	<td><input class="inputRadio" id="QuickSearchType1" type="radio" checked="" value="intranet" name="QuickSearchType"></td>
+	
+            	<td class="radioLabel">Internet</td>
+	
+            	<td><input class="inputRadio" id="QuickSearchType2" type="radio" value="internet" name="QuickSearchType"></td>
+	
+		        <td style="PADDING-LEFT: 10px"><input class="searchBox" onkeypress="javascript:return CheckForEnter(event, &#39;http://gss.up.corp.upc/SearchResults.aspx?q=&#39;, &#39;QuickSearchText&#39;);" id="QuickSearchText" onfocus="javascript:this.value=&#39;&#39;" value="Enter Search Terms" name="QuickSearchText"></td>
+	
+		        <td><a id="QuickSearchBtn" href="javascript: DisplayQuickSearch('http://gss.up.corp.upc/SearchResults.aspx?q=','QuickSearchText','');"><img alt="Search" src="./Inside - Home_files/IMG_Inside_btn_search_arrow.gif" border="0"></a></td>
+	
+            	<td>&nbsp;</td>
+          	</tr>
+        	</tbody>
+      	</table>
+		<form id="GlobalSearchForm" action="http://gss.up.corp.upc/SearchResults.aspx" method="get">
+        	<input type="hidden" name="q" id="q">
+		</form>
+    </div>
+  </div><!--Header Ends -->
+<!--T1Nav Starts -->
+
+    <div class="NavContainer">
+      <!--<div id="t1nav"> -->
+
+      <div>
+        <comment>Perform binary search of departments in the static list</comment>
+ 
+	
+						
+					
+			 
+	 
+						
+					
+			 
+									
+					
+			 
+									
+					
+			 
+	
+<script>
+/////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 2007, 2008, Oracle. All rights reserved.
+// Function : InsideTierOneNav
+// Comments : 
+/////////////////////////////////////////////////////////////////////////////
+
+function InsideTierOneNav(strClassName, strShowHome, strTabBreak)
+{
+	this.m_ClassName = 'InsideTierOneNav';
+	this.m_TabBreak  = 2;
+	this.m_ShowHome  = false;
+	this.m_NavPath   = g_navNode_Path;
+
+	InsideTierOneNav.prototype.Display = InsideTierOneNav_Display;
+		
+	if (strClassName != '')
+		this.m_ClassName = strClassName;
+
+	if (strShowHome == 'true')
+		this.m_ShowHome = true;
+
+	if (strTabBreak != '')
+		this.m_TabBreak = parseInt(strTabBreak) - 2; //Account for Home tab at -1
+}
+
+function InsideTierOneNav_Display (node)	
+{
+	var bSelected = false;
+	var displayTab = true; 
+	var nodeClass = this.m_ClassName;
+		
+	var ds = new Array();
+	var di = 0;
+	var count =  this.m_ShowHome ? -1 : 0;
+
+	var href = '';
+	var label = '';
+	
+	ds[di++] = '<span';
+	
+	if ( this.m_ClassName != '')
+		ds[di++] = ' class="' + this.m_ClassName + '"';
+
+	ds[di++] = '>'; 
+		
+	for ( ; count < node.m_subNodes.length; count++)
+	{
+		bSelected = false;
+		
+		if (count == -1)	// Root link
+		{
+			if ( (this.m_NavPath.length == node.m_level+1) &&
+				 (this.m_NavPath[node.m_level] == node.m_id) )
+			{
+				bSelected = true;
+			}
+			
+			label = node.m_label;
+			href  = node.m_href;
+
+			if ('' == label)
+			{
+				bSelected = true;
+			}			
+		}
+		else
+		{	
+			if (this.m_NavPath.length > node.m_subNodes[count].m_level)
+			{
+				if (this.m_NavPath[node.m_subNodes[count].m_level] == node.m_subNodes[count].m_id)
+				{
+					bSelected = true;
+				}
+			}
+			
+			label = node.m_subNodes[count].m_label;
+			href = node.m_subNodes[count].m_href;
+
+			if ('' == label)
+			{
+				bSelected = true;
+			}			
+		}
+
+		if (displayTab)
+		{
+			ds[di++] = '<a href="' + href + '"';
+	
+			if (bSelected)
+			{
+	    		ds[di++] = ' class="Active"';
+			}
+							
+			ds[di++] = '>';
+			ds[di++] = label;
+			ds[di++] = '</a>';
+		
+			if (count == this.m_TabBreak)
+			{ 
+				ds[di++] = '</span><span';
+	
+				if ( this.m_ClassName != '')
+					ds[di++] = ' class="' + this.m_ClassName + '"';
+	
+				ds[di++] = '>'; 
+ 			}
+ 		}
+	}
+	 
+	if ('{"gethyperlink_href":"http://dmsprd.up.corp.upc/GlobalServices/index.htm?ssSourceSiteId=inside","gethyperlink_target":""}' != "none")
+	{
+		var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/GlobalServices/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+				
+		ds[di++] = '<a href="' + data.gethyperlink_href + '"';
+		
+		if ('false' == "true")
+			ds[di++] = ' target="_blank"'; 
+			
+		ds[di++] = '>My Department</a>'; 
+	}
+
+	ds[di++] = '</span>'; 
+	document.write(ds.join(''));
+}
+
+
+	var TabLabel = Array();
+	var Inside_navNode_Root = new NavNode('586','Home','http://inside/index.htm',null,'PageTitle==Inside - Home');
+					
+										
+			ret = Inside_navNode_Root.addNode('593','Unum US','http://inside/unumus/index.htm','','PageTitle==Inside - Unum US');
+					
+										
+			ret = Inside_navNode_Root.addNode('594','Unum UK','http://inside/unumuk/index.htm','','PageTitle==Inside - Unum UK');
+					
+										
+			ret = Inside_navNode_Root.addNode('595','Colonial Life','http://inside/coloniallife/index.htm','','PageTitle==Inside - Colonial Life');
+					
+								
+								
+						ret = Inside_navNode_Root.addNode('598','HR Info','http://inside/hrinfoire/index.htm','','PageTitle==Inside - HR Info');
+					
+										
+			ret = Inside_navNode_Root.addNode('599','Work Tools','http://inside/worktools/index.htm','','PageTitle==Inside - Work Tools');
+					
+										
+			ret = Inside_navNode_Root.addNode('','My Networks','http://inside/myconnections','','PageTitle==Inside - My Networks');
+
+
+var TabStrip = new InsideTierOneNav('InsideTierOneNav', 'true', '4');
+TabStrip.Display(Inside_navNode_Root);
+
+</script><span class="InsideTierOneNav"><a href="http://inside/index.htm" class="Active">Home</a><a href="http://inside/unumus/index.htm">Unum US</a><a href="http://inside/unumuk/index.htm">Unum UK</a><a href="http://inside/coloniallife/index.htm">Colonial Life</a></span><span class="InsideTierOneNav"><a href="http://inside/hrinfoire/index.htm">HR Info</a><a href="http://inside/worktools/index.htm">Work Tools</a><a href="http://inside/myconnections">My Networks</a><a href="http://dmsprd.up.corp.upc/GlobalServices/index.htm?ssSourceSiteId=inside">My Department</a></span>
+      </div>
+    </div><!--End nav container -->
+
+    <div class="ContentContainer">
+      <script src="./Inside - Home_files/SCRIPT_Inside_WebTicker.js" language="javascript"></script>
+<div id="TICKER">&nbsp;</div>
+<script language="JavaScript" type="text/javascript">
+	InitAlertScroll();
+</script>
+
+      <table class="boxHolder" border="0" cellspacing="0" cellpadding="0" width="990">
+        <tbody>
+          <tr valign="top">
+            <td>
+              <!--Content Container Starts -->
+
+              <div class="LeftBox">
+                
+		<span class="AreaTitleHome">
+		<h1>
+		Unum		
+	
+		</h1>
+		</span>
+
+                <div class="CurrentDate">
+		24 July 2014
+</div> 
+                			
+				
+			
+					<!--<hr />-->
+					<div class="hr_seperator">&nbsp;</div>
+				<div class="Category">Essential Links</div>
+				<div class="T2NavSlate">
+					<ul>
+										
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"/CorporateDepartments/index.htm","gethyperlink_target":""};
+										var title = "Corporate Departments";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://inside/CorporateDepartments/index.htm">Corporate Departments</a></li>
+																								
+																									
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateRealEstate/CorporateSecurityandSafety/SYS_URL_Emergency_Info?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Security, Safety and Emergency Information";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateRealEstate/CorporateSecurityandSafety/SYS_URL_Emergency_Info?ssSourceSiteId=inside">Security, Safety and Emergency Information</a></li>
+																								
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/Privacy/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Privacy and Information Security";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/Privacy/index.htm?ssSourceSiteId=inside">Privacy and Information Security</a></li>
+																								
+																	
+					</ul>
+				</div>
+			
+
+                			
+				
+			
+					<!--<hr />-->
+					<div class="hr_seperator">&nbsp;</div>
+				<div class="Category">Publications &amp; Live Events</div>
+				<div class="T2NavOrange">
+					<ul>
+										
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateMarketing/CommunitySites/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Community sites";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateMarketing/CommunitySites/index.htm?ssSourceSiteId=inside">Community sites</a></li>
+																								
+															
+																	
+							
+												
+										
+								
+												
+								
+																					<li>
+														<a href="http://inside/EIP_015110">Connections archive</a>
+									
+				
+											</li>
+																
+																								
+																									
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://insideview/home","gethyperlink_target":"_blank"};
+										var title = "Insideview Live Events";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://insideview/home" target="_blank">Insideview Live Events</a></li>
+																								
+															
+																	
+							
+												
+										
+								
+												
+								
+																					<li>
+														<a href="http://inside/EIP_022368">ONE</a>
+									
+				
+											</li>
+																
+															
+																										
+																									
+							
+												
+										
+								
+												
+								
+																					<li>
+														<script type="text/javascript">
+															var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/Publications/EIP_145850","gethyperlink_target":"_blank"};
+															var title = "To the Point";
+															
+															document.write('<a href="' + data.gethyperlink_href + '">' + title + '</a>');
+														</script><a href="http://dmsprd.up.corp.upc/CorporateCommunications/Publications/EIP_145850">To the Point</a>
+																						
+				
+											</li>
+																
+															
+																	
+							
+												
+										
+								
+												
+								
+																					<li>
+														<a href="http://inside/EIP_131344">We Are Unum</a>
+									
+				
+											</li>
+									
+					</ul>
+				</div>
+			
+
+                			
+				
+			
+					<!--<hr />-->
+					<div class="hr_seperator">&nbsp;</div>
+				<div class="Category">Applications</div>
+				<div class="T2NavGreen">
+					<ul>
+										
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://hrapps/HumanResources/MAPS","gethyperlink_target":"_blank"};
+										var title = "MAPS";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://hrapps/HumanResources/MAPS" target="_blank">MAPS</a></li>
+																								
+																									
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://psoftprd.upc/HRMS/selfservice/default_ess.asp","gethyperlink_target":"_blank"};
+										var title = "Information About YOU";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://psoftprd.upc/HRMS/selfservice/default_ess.asp" target="_blank">Information About YOU</a></li>
+																								
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/ServiceCatalog/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Global Services - Service Catalog";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/ServiceCatalog/index.htm?ssSourceSiteId=inside">Global Services - Service Catalog</a></li>
+																								
+																																		
+																									
+							
+												
+										
+								
+												
+								
+																					<li>
+													<a href="http://www.unumspotlight.com/" target="_blank">SPOTLIGHT</a>
+  																
+											</li>
+									
+					</ul>
+				</div>
+					<!--<hr />-->
+					<div class="hr_seperator">&nbsp;</div>
+			
+
+                			
+				
+			
+				<div class="Category">Unum Websites</div>
+				<div class="T2NavDarkBlue">
+					<ul>
+										
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://www.unumgroup.com","gethyperlink_target":"_blank"};
+										var title = "Unum Group";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://www.unumgroup.com/" target="_blank">Unum Group</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://www.unum.com","gethyperlink_target":"_blank"};
+										var title = "Unum US";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://www.unum.com/" target="_blank">Unum US</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://www.unum.co.uk/","gethyperlink_target":"_blank"};
+										var title = "Unum UK";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://www.unum.co.uk/" target="_blank">Unum UK</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://www.unum.com/ireland","gethyperlink_target":"_blank"};
+										var title = "Unum Ireland";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://www.unum.com/ireland" target="_blank">Unum Ireland</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://www.coloniallife.com/","gethyperlink_target":"_blank"};
+										var title = "Colonial Life";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://www.coloniallife.com/" target="_blank">Colonial Life</a></li>
+																	
+					</ul>
+				</div>
+			
+
+              </div>
+            </td>
+
+            <td>
+              <div class="MiddleBox">
+                <div class="MiddleBoxTop">
+                  <div class="LeadStory"><div class="LeadImage"><a target="" href="http://inside/EIP_230623"><img border="0" alt="Central Graphic - Home 343x282" src="./Inside - Home_files/img_inside_centralgraphic_home.jpg"></a></div>
+	
+			<h2><a href="http://inside/EIP_230623">Improved enrollment technology means millions in sales</a></h2>
+			<div class="Dateline">
+					23 Jul 2014
+			</div>
+			<div class="LeadStoryText">
+					A growing number of employers are working with third-party technology partners, and Colonial Life and Unum US are well-positioned to meet this growing demand.
+			</div>
+			<div class="Fullstory">
+				<div>
+				<a href="http://inside/EIP_230623">Full Story »</a>
+				</div>
+					<div class="FullstoryImage">
+						 
+																						
+					
+  					</div>
+					<div class="FullstoryImage">
+	
+						 
+						 
+																	
+					
+  					</div>
+			</div>
+</div>
+
+                </div>
+
+                <div class="Spotlight">
+                  <div class="Spotlight">
+		
+				<div class="Thumbnail">
+					<a href="http://inside/EIP_230616"><img alt="fans thumbnail" src="./Inside - Home_files/eip_230619.jpg"></a>
+				</div>
+				<h2><a href="http://inside/EIP_230616">Hey sports fans, we want to hear from you</a></h2>
+			<div class="ThumbDate">
+					23 Jul 2014
+			</div>	
+			<p>
+					In the next issue of One magazine we’re creating a photo montage of people who really love their team, and we’d like you to send us pictures that illustrate the lengths you’ll go to show your support.
+			</p>
+			<div class="Fullstory">
+				<div>
+				<a href="http://inside/EIP_230616">Full Story »</a>
+				</div>
+				<div class="FullstoryImage">
+						 
+																						
+					
+  					</div>
+				<div class="FullstoryImage">
+	
+						 
+						 
+																	
+					
+  					</div>
+			</div>
+		<br>
+				<div class="Thumbnail">
+					<a href="http://inside/EIP_230564"></a>
+				</div>
+				<h2><a href="http://inside/EIP_230564">Getting a front-row seat on the client experience</a></h2>
+			<div class="ThumbDate">
+					21 Jul 2014
+			</div>	
+			<p>
+					Teams from Unum are hitting the road, going deskside with our employer clients to see Unum through their eyes and on their terms.
+			</p>
+			<div class="Fullstory">
+				<div>
+				<a href="http://inside/EIP_230564">Full Story »</a>
+				</div>
+				<div class="FullstoryImage">
+						 
+																						
+					
+  					</div>
+				<div class="FullstoryImage">
+	
+						 
+						 
+																	
+					
+  					</div>
+			</div>
+		<br>
+		<div align="right" class="MoreLink">
+			<a href="http://inside/NewsRoom/index.htm?siteLabel=Home"><b>More Company News and Archives&nbsp;&nbsp;»</b></a>
+		</div>
+</div>
+
+                </div>
+
+                <div class="MiddleBottom">
+                  	
+		<hr>
+		<div class="Headlines">
+		<h2>Headlines</h2>
+			<p>
+			<a href="http://inside/UnumUS/EIP_230621">Survey says workplace, benefits satisfaction hits low point »</a>&nbsp;&nbsp;
+			<span class="Dateline">
+					23 Jul 2014
+			</span>
+
+					 
+																					
+				
+	
+					 
+					 
+																	
+				
+			</p>
+			<p>
+			<a href="http://inside/EIP_230524">Unum UK's Tom Wetherill is a problem solver »</a>&nbsp;&nbsp;
+			<span class="Dateline">
+					21 Jul 2014
+			</span>
+
+					 
+																					
+				
+	
+					 
+					 
+																	
+				
+			</p>
+			<p>
+			<a href="http://inside/UnumUK/EIP_230566">Unum UK launches Mental Health First Aid initiative »</a>&nbsp;&nbsp;
+			<span class="Dateline">
+					21 Jul 2014
+			</span>
+
+					 
+																					
+				
+	
+					 
+					 
+																	
+				
+			</p>
+			<p>
+			<a href="http://inside/EIP_230537">Be careful: Slips, trips and falls are on the rise »</a>&nbsp;&nbsp;
+			<span class="Dateline">
+					17 Jul 2014
+			</span>
+
+					 
+																					
+				
+	
+					 
+					 
+																	
+				
+			</p>
+		</div>
+
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <div class="RightBox">
+                
+                
+                
+                
+                
+                
+                
+                
+                                       
+                			
+				
+			
+				<div class="Category">About Unum</div>
+				<div class="T2NavAqua">
+					<ul>
+										
+																								
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/Law/CodeofConduct/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Code of Conduct";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/Law/CodeofConduct/index.htm?ssSourceSiteId=inside">Code of Conduct</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/ContinuousImprovement/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Continuous Improvement";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/ContinuousImprovement/index.htm?ssSourceSiteId=inside">Continuous Improvement</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/CorporateAwards/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Corporate Awards";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/CorporateAwards/index.htm?ssSourceSiteId=inside">Corporate Awards</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/CorporatePriorities/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Corporate Priorities";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/CorporatePriorities/index.htm?ssSourceSiteId=inside">Corporate Priorities</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/FinancialInformation/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Financial Information";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/FinancialInformation/index.htm?ssSourceSiteId=inside">Financial Information</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/AboutUnum/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Our Company";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/AboutUnum/index.htm?ssSourceSiteId=inside">Our Company</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/UnumBrands/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "The Unum Brands";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/UnumBrands/index.htm?ssSourceSiteId=inside">The Unum Brands</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/VisionandValues/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Vision and Values";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/AboutUnum/VisionandValues/index.htm?ssSourceSiteId=inside">Vision and Values</a></li>
+																	
+					</ul>
+				</div>
+			
+
+                			
+				
+			
+					<!--<hr />-->
+					<div class="hr_seperator">&nbsp;</div>
+				<div class="Category">Corporate Social Responsibility</div>
+				<div class="T2NavDarkBlue">
+					<ul>
+										
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/CommunityGiving/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Community Giving";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/CommunityGiving/index.htm?ssSourceSiteId=inside">Community Giving</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/CommunityVolunteering/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Community Volunteering";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/CommunityVolunteering/index.htm?ssSourceSiteId=inside">Community Volunteering</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/CorporateGovernance/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Corporate Governance";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/CorporateGovernance/index.htm?ssSourceSiteId=inside">Corporate Governance</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/EnvironmentalResponsibility/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Environmental Responsibility";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/EnvironmentalResponsibility/index.htm?ssSourceSiteId=inside">Environmental Responsibility</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/PublicEngagement/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Public&nbsp;Engagement";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/PublicEngagement/index.htm?ssSourceSiteId=inside">Public&nbsp;Engagement</a></li>
+																								
+															
+																	
+																									
+							
+									
+									<script type="text/javascript">
+										var data = {"gethyperlink_href":"http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/Workplace/index.htm?ssSourceSiteId=inside","gethyperlink_target":""};
+										var title = "Workplace";
+										
+										if (data.gethyperlink_target == '')
+										{
+											document.write('<li><a href="' + data.gethyperlink_href + '">' + title + '</a></li>');
+										}
+										else
+										{									
+											document.write('<li><a href="' + data.gethyperlink_href + '" target=' + data.gethyperlink_target + '>' + title + '</a></li>');
+										}
+									</script><li><a href="http://dmsprd.up.corp.upc/CorporateCommunications/CorporateSocialResponsibility/Workplace/index.htm?ssSourceSiteId=inside">Workplace</a></li>
+																	
+					</ul>
+				</div>
+			
+
+                <style type="text/css">
+div.RightBox div.StockQuote table {
+	border: 0px !important;
+	margin-left: -20px;
+}
+
+div.RightBox div.StockQuote table tr td {
+	font-size: 11px;
+	border: 0px !important;
+	padding-left: 20px;
+	text-align: left;
+}
+
+div.RightBox div.StockQuote div.HeaderText {
+	font-size: 11px;
+	margin-bottom: 5px;
+}
+
+div.RightBox div.StockQuote div.DelayText {
+	font-size: 10px;
+	margin-bottom: 5px;
+	font-style:italic;
+}
+
+div.RightBox div.StockQuote div.MoreDetailsContainer {
+	margin-top: 8px;
+}
+
+div.RightBox div.StockQuote div.MoreDetailsContainer a.MoreDetails {
+	text-decoration: none;
+	font-size: 8pt;
+	font-weight: 700;
+}
+</style>
+
+		<div class="hr_seperator">&nbsp;</div>
+	
+	<div class="Category">Stock Market Watch</div>
+	<div class="StockQuote">
+			<div class="HeaderText">UNM (last updated at 11:01 AM ET)</div>
+			<div class="DelayText">Minimum 20 minute delay</div>
+			<table border="1" cellpadding="2" cellspacing="0"><tbody><tr><td>Price ($):</td><td align="right">34.82</td></tr><tr><td>Change ($):</td><td align="right">(0.18)</td></tr><tr><td>Change (%):</td><td align="right">(0.51)</td></tr><tr><td>Volume:</td><td align="right">302,021</td></tr><tr><td>High ($):</td><td align="right">35.00</td></tr><tr><td>Low ($):</td><td align="right">34.80</td></tr></tbody></table>
+		<div class="MoreDetailsContainer">
+			<a class="MoreDetails" href="http://investors.unum.com/stockinfo.aspx?iid=103324" target="_blank">More Details »</a>
+		</div>
+	</div>
+		<div class="hr_seperator">&nbsp;</div>
+
+                 
+	<div class="FastFact">
+		<span class="category">Quotation of the day</span>
+		<div><p>Listening is active. At its most basic level, it's about focus, paying attention. <br><br>- Simon Sinek</p></div>
+			<div><a href="http://inside/stellent/idcplg?IdcService=SS_GET_PAGE&ssDocName=EIP_030484">Archive Page</a></div>
+	</div>
+
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="Footer">
+      <script src="./Inside - Home_files/script_inside_computerinfo.js"></script>
+<script language="javascript">
+</script>
+<table id="utilitymenu" align="center">
+	<tbody><tr>
+		<td><a href="http://dmsprd.up.corp.upc/stellent/linkhtml.hcst?contentid=eip_022382" target="_blank">Help</a>|</td>
+		<td><a href="http://dmsprd.up.corp.upc/inside/Forms/EIP_184513" target="_blank">Feedback</a>|</td>
+		<td><a href="http://dmsprd.up.corp.upc/KMCenter/index.htm">Admin</a>|</td>
+		<td><a href="javascript:PopComputerInfo('10.14.72.142');">Computer Information</a>&nbsp;</td>
+	</tr>
+</tbody></table>
+
+    </div><!--MainContainer Ends -->
+  </div>
+
+
+<div id="window-resizer-tooltip"><a href="http://inside/#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div><span style="margin: 0px auto; border: 2px dotted rgb(255, 165, 0); position: absolute; z-index: 2147483647; visibility: hidden; left: 85px; width: 0px; top: 199px; height: 0px;"></span><span style="z-index: 2147483647; position: absolute; visibility: hidden; left: 70px; width: 50px; top: 184px; height: 20px; font-size: 10px; color: black;"></span></body></html>
