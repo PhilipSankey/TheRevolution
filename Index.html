@@ -1,118 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-    <title>Bootstrap</title>
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-    <link href="css/bootstrap.min.css" rel="styleSheet" />
-    <link href="css/styles.css" rel="styleSheet" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-    <!-- THIS IS THE NAVBAR -->
-    <div class="navbar navbar-default">
-        <div class="container">
-            <a class="navbar-brand" href="#">#TheRevolution</a> 
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-                <a class="icon-bar"></a>
-                <a class="icon-bar"></a>
-                <a class="icon-bar"></a>
-            </button>
-            <div class="collapse navbar-collapse navHeaderCollapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#Login" data-toggle="modal">SomeThing</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Something Else</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">bananas</a>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand"><link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>revolution</link></h3>
+                        <ul class="nav masthead-nav">
+                            <li class="active"><a href="index.html">Home</a>
+                            </li>
+                            <li><a href="#">Learn</a>
+                            </li>
+                            <li><a href="#">Immerse</a>
                             </li>
                         </ul>
-                    </li>
-                </ul>
+
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <h1 class="cover-heading">It's a revolution.</h1>
+                    <p class="lead">
+                        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>The power of business software at your fingertips. Track and improve on your usage of the software necessary for your career.
+                        <br>Are you ready for the learning revolution?</link>
+                    </p>
+                    <p class="lead" id="small">
+                        <button class="btn btn-lg btn-default" data-toggle="modal" data-target="#signup">
+                            Sign Up
+                        </button>
+                        <br>
+                        <a href="#" data-toggle="modal" data-target="#login">Log In</a>
+                    </p>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>Innovation Challenge Project for <a href="http://unum.com">Unum</a>
+                            <br>Philip Sankey, Justin Conant, Anqi Cong, Breanna George, &amp; Rich Roberts.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="color:black">New Account details.</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="color:black">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" style="color:black">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" style="color:black">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirm">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-lg btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#next">
+                        Next
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- THIS IS THE CONTENT-->
-    <div class="container">
-        <div class="jumbotron">
-            <h1>TEXXXTTT</h1>
-        </div>
-    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="next" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="color:black">New Account details</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title" id="myModalLabel" style="color:black">What Role do you play?</h4>
+                    <form role="form">
+                        <select class="form-control">
+                            <option>Sales Rep</option>
+                            <option>Under Writer</option>
+                            <option>Sales Co-ordinator</option>
+                            <option>...</option>
+                            <option>...</option>
+                        </select>
+                    </form>
+                    <br>
+                    <h4 class="modal-title" id="myModalLabel" style="color:black">How many hours do you spend at your computer?</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <select multiple class="form-control">
+                                <option>
+                                    < 1hr a Day</option>
+                                        <option>1-3hrs</option>
+                                        <option>3-6hrs</option>
+                                        <option>6+ hrs</option>
 
-    <div class="container">
-        <div class="row">
+                            </select>
+                        </div>
+                        <div class="form-group">
 
+                        </div>
 
+                    </form>
+                    <h4 class="modal-title" id="myModalLabel" style="color:black">-	How do you track your compensation?</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <select multiple class="form-control">
+                                <option>
+                                        <option>SF</option>
+                                        <option>Excel</option>
+                                        <option>Optymyze</option>
+                                <option>...</option>
 
-
-            <div class="col-md-3">
-
-                <h3><a href = "#"></a></h3> 
-                <p>World War II (WWII or WW2), also known as the Second World War, was a global war that lasted from 1939 to 1945, though related conflicts began earlier. It involved the vast majority of the world's nations—including all of the great powers—eventually forming two opposing military alliances: the Allies and the Axis. It was the most widespread war in history, and directly involved more than 100 million people, from more than 30 different countries. In a state of "total war", the major participants threw their entire economic, industrial, and scientific</p>
-
-
+                            </select>
+                        </div>
+                    </form>
+                    <h4 class="modal-title" id="myModalLabel" style="color:black">-	How comfortable are you at utilizing technology?</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <select multiple class="form-control">
+                                <option>
+                                        <option>Very</option>
+                                        <option>not really</option>
+                                        <option>never touch a computer ...ever </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><a href="blankAcc.html">Create Account</a></button>
             </div>
-            <div class="col-md-3">
-
-                <h3><a href = "#"></a></h3> 
-                <p>World War II (WWII or WW2), also known as the Second World War, was a global war that lasted from 1939 to 1945, though related conflicts began earlier. It involved the vast majority of the world's nations—including all of the great powers—eventually forming two opposing military alliances: the Allies and the Axis. It was the most widespread war in history, and directly involved more than 100 million people, from more than 30 different countries. In a state of "total war", the major participants threw their entire economic, industrial, and scientific</p>
-
-
-            </div>
-            <div class="col-md-3">
-
-                <h3><a href = "#"></a></h3> 
-                <p>World War II (WWII or WW2), also known as the Second World War, was a global war that lasted from 1939 to 1945, though related conflicts began earlier. It involved the vast majority of the world's nations—including all of the great powers—eventually forming two opposing military alliances: the Allies and the Axis. It was the most widespread war in history, and directly involved more than 100 million people, from more than 30 different countries. In a state of "total war", the major participants threw their entire economic, industrial, and scientific</p>
-
-
             </div>
             
-             <div class="col-md-3">
-
-                <h3><a href = "#"></a></h3> 
-                <p>World War II (WWII or WW2), also known as the Second World War, was a global war that lasted from 1939 to 1945, though related conflicts began earlier. It involved the vast majority of the world's nations—including all of the great powers—eventually forming two opposing military alliances: the Allies and the Axis. It was the most widespread war in history, and directly involved more than 100 million people, from more than 30 different countries. In a state of "total war", the major participants threw their entire economic, industrial, and scientific</p>
-
-
-            </div>
         </div>
     </div>
-
-    <!-- FOOTER BAR CODE OGES ABOVE-->
-    <div class="navbar navbar-default navbar-fixed-bottom" style="color: gray">
-        <div class="container">
-            <p class="navbar-text pull-left">Viva La #revolution</p>
-        </div>
-    </div>
-    
-    <div class = "modal fade" id = "Login" role = "dialog">
-        
-        <div class = "modal-dialog">
-            <div class = "modal-content">
-                <div class = "modal-header">
-                    <h4>Login</h4>
-                </div>    
-                <div class = "modal-body">
-                    login boxes or something
+<!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="color:black">Login</h4>
                 </div>
-                <div class = "modal-footer">
-                    <a class = "btn btn-danger pull-right" data-dismiss = "modal">Cancel</a>
-                    <a class = "btn btn-primary pull-right" data-dismiss = "modal">Login</a>
-                    
+                <div class="modal-body">
+                     <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="color:black">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" style="color:black">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                    </form>
                 </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success"><a href="read.html">Login</a></button>
             </div>
+            </div>
+            
         </div>
     </div>
-    
+    </div>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
 </body>
 
 </html>
