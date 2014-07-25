@@ -93,20 +93,21 @@
                             <div class="panel-body" style="height:100%">
                                 <table class="table table-condensed">
                                     <tbody style="">
-                                        <tr class="success" style="">
+                                        <tr class="success">
 
 
                                             <td style="width: 50%;vertical-align: middle;">
-                                                <b>Find:</b> A link to tools you would use for work.
+                                                <span class="toolTip" data-toggle="popover" data-placement="bottom" data-content="This is your task"><b>Find:</b> A link to tools you would use for work.</span>
                                             </td>
 
                                             <td style="width: 10%;vertical-align: middle; ">
-                                                Step 1 of 5
+                                                <span class="toolTip" id ="step" data-toggle="popover" data-placement="top" data-content="This is the area your working in.">Step 1 of 15</span>
                                             </td>
                                             <td style="width: 40%;">
-                                                <div class="progress" style="margin-bottom:3px">
 
-                                                    <div class="progress-bar progress-bar-success progress-bar-striped bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-="" valuemax="100" width="0px">
+                                                <div class="progress toolTip" data-toggle="popover" data-placement="bottom" data-content="This is your progress and time spent on challenge. You get more exp for finishing under this time." style="margin-bottom:3px">
+
+                                                    <div class="progress-bar progress-bar-success progress-bar-striped bar" id="switchBar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-="" valuemax="100" width="0px">
                                                     </div>
                                                 </div>
                                             </td>
@@ -114,131 +115,215 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <iframe src="http://inside/" width="100%" height="100%"></iframe>
+                                <iframe class="frm" src="http://inside/" width="100%" height="100%"></iframe>
+                                <div class="Hint"></div>
+                                <div class="dot"></div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="modal fade" id="myModal" role="dialog">
+             <div class="modal fade" id="initial" role="dialog">
 
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4>Login</h4>
-                    </div>
-                    <div class="modal-body">
-                        login boxes or something
-                    </div>
-                    <div class="modal-footer">
-                        <a class="btn btn-danger pull-right" data-dismiss="modal">Cancel</a>
-                        <a class="btn btn-primary pull-right" onclick="load()" data-dismiss="modal">Login</a>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Welcome to your first lesson</h4>
+                        </div>
+                        <div class="modal-body">
+                            Would you like to take a tour of the features of the lesson page?
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-danger pull-right" data-dismiss="modal">No</a>
+                            <a class="btn btn-primary pull-right" data-toggle="modal" data-dismiss="modal" data-target="#myModal">Yes</a>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="needHelp" role="dialog">
-
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4>Welcome to your first lesson</h4>
-                    </div>
-                    <div class="modal-body">
-                        Would you like to take a tour f the features of the lesson page?
-                    </div>
-                    <div class="modal-footer">
-                        <a class="btn btn-danger pull-right" data-dismiss="modal">Cancel</a>
-                        <a class="btn btn-primary pull-right" onclick="load()" data-dismiss="modal">Login</a>
-
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            
+            <div class="modal fade" id="myModal" role="dialog">
 
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Welcome to your first lesson</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body">
+                          <p style="text-align:left"><em><i>The Problem: </i></em></p><p> Your project manager wants you to track the number oftime you spend on   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dolor neque, hendrerit ut velit quis, consectetur sodales augue. Ut at ipsum quam. Phasellus eu sapien varius, dapibus metus ornare, bibendum orci. </p>
+                            <br>
+                             <p style="text-align:left"><em><i>The Solution</i></em></p><p> In this lesson you will learn the fastest way to fill in clarity. </p>
+                        </div>
+                        
+                        </div>
+                        <div class="modal-footer">
+                           
+                            <a class="btn btn-primary pull-right" onclick="load(); bars();" data-dismiss="modal">Continue</a>
 
-        <script src="js/jquery-2.1.1.min.js"></script>
-        <script src="js/stickyMojo.js"></script>
-        <script src="js/bootstrap.js"></script>
-
-        <script>
-            $(window).resize(function () {
-                $('#sidebar').css({
-                    width: $('#wrapper').width()
-                });
-            });
-
-            $(window).resize(function () {
-                $("#sidebar").css({
-                    width: $('#wrapper').width()
-                })
-            });
-
-            $(window).scroll(function () {
-                $('#sidebar').css({
-                    position: 'fixed',
-                    width: $('#wrapper').width()
-                });
-            });
-
-            $(function () {
-                $('.dropdown').hover(function () {
-                    $(this).toggleClass('open');
-                });
-            });
-
-
-            $(function () {
-                $('.locked').hover(function () {
-                    originalImg = $(this).children("img").attr("src");
-                    $(this).children("img").attr("src", "css/lock.png");
-                }, function () {
-                    $(this).children("img").attr("src", originalImg);
-                });
-            });
-
-            var width1 = 0;
-
-
-
-
-            $(function () {
-                $('.locked').hover(function () {
-                    originalImg = $(this).children("img").attr("src");
-                    $(this).children("img").attr("src", "css/lock.png");
-                }, function () {
-                    $(this).children("img").attr("src", originalImg);
-                });
-            });
-
-            $(window).load(function () {
-                $('#myModal').modal('show');
-            });
-
-            function load() {
-                var progress = setInterval(function () {
-                    var $bar = $('.bar');
-                    if (width1 > 100) {
-                        clearInterval(progress);
-                        $('.progress').removeClass('active');
-                        $('#needHelp').modal('show');
-                    }
-                    $bar.width(width1 + "%");
-                    width1 = parseInt(width1);
-                    width1 = width1 + 10;
-                }, 1000);
-
-            }
-        </script>
-        <div class="footer visible-lg" style="color: gray">
-            <div class="container">
-                <p class="navbar-text pull-left">Viva La #Revolucion</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="modal fade" id="needHelp" role="dialog">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Hey?</h4>
+                        </div>
+                        <div class="modal-body">
+                            I see your stuck ? would you like a hint ? :)
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-danger pull-right" data-dismiss="modal">No</a>
+                            <a class="btn btn-primary pull-right" onclick="showHint()" data-dismiss="modal">Yes</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="modal fade" id="Congrats" role="dialog">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                           <h4><span style = "color:green" >Congratulations!</span>  You've earned<span style="color:rgb(243, 109, 109)"> 60xp</span></h4>
+                        </div>
+                        <div class="modal-body">
+                          <p style="text-align:left"><em><i>The Connection: </i></em></p><p> When you put your hours into Clarity, management can Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dolor neque, hendrerit ut velit quis, consectetur sodales augue. Ut at ipsum quam. Phasellus eu sapien varius, dapibus metus ornare, bibendum orci. </p>
+                            <br>
+                             <p style="text-align:left"><em><i>What do I do now?: </i></em></p><p>make it a habit to sit down for a minute or two each day and fill in clarity so you dont Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dolor neque, hendrerit ut velit quis, consectetur sodales augue. Ut at ipsum quam. Phasellus eu sapien varius, dapibus metus ornare, bibendum orci. </p>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-success pull-right" onClick="location.href='blankAcc2.html'" data-dismiss="modal">Finish</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/jquery-2.1.1.min.js"></script>
+            <script src="js/stickyMojo.js"></script>
+            <script src="js/bootstrap.js"></script>
+
+            <script>
+                $(window).resize(function () {
+                    $('#sidebar').css({
+                        width: $('#wrapper').width()
+                    });
+                });
+
+                $(window).resize(function () {
+                    $("#sidebar").css({
+                        width: $('#wrapper').width()
+                    })
+                });
+
+                $(window).scroll(function () {
+                    $('#sidebar').css({
+                        position: 'fixed',
+                        width: $('#wrapper').width()
+                    });
+                });
+
+                $(function () {
+                    $('.dropdown').hover(function () {
+                        $(this).toggleClass('open');
+                    });
+                });
+
+
+                $(function () {
+                    $('.locked').hover(function () {
+                        originalImg = $(this).children("img").attr("src");
+                        $(this).children("img").attr("src", "css/lock.png");
+                    }, function () {
+                        $(this).children("img").attr("src", originalImg);
+                    });
+                });
+
+                var width1 = 0;
+
+
+                 $(function () {
+                    $('.Hint').click(function () {
+                        var iframe = $(".frm");
+                        iframe.attr('src', 'CA Clarity PPM    Timesheet.htm')
+                         $('.dot').css("visibility", "hidden")
+                          $('#step').text("Step 15 of 15")
+                          $('#switchBar').width(70+"%")
+                           $('#Congrats').modal('show');
+                         $('.progress').removeClass('active');
+                        
+                    });
+                });
+
+                $(function () {
+                    $('.locked').hover(function () {
+                        originalImg = $(this).children("img").attr("src");
+                        $(this).children("img").attr("src", "css/lock.png");
+                    }, function () {
+                        $(this).children("img").attr("src", originalImg);
+                    });
+                });
+
+                $(window).load(function () {
+                    $('#initial').modal('show');
+                });
+
+                function load() {
+                    setTimeout(function () {
+                        var progress = setInterval(function () {
+                            var $bar = $('.bar');
+                            if (width1 == 40) {
+                                if ($('#switchBar').hasClass("progress-bar-success")) {
+                                    $('#switchBar').addClass("progress-bar-warning")
+                                    $('#switchBar').removeClass("progress-bar-success")
+                                }
+
+                            }
+                            if (width1 == 70) {
+                                if ($('#switchBar').hasClass("progress-bar-warning")) {
+                                    $('#switchBar').addClass("progress-bar-danger")
+                                    $('#switchBar').removeClass("progress-bar-warning")
+                                }
+
+                            }
+                            if (width1 > 100) {
+                                clearInterval(progress);
+                                $('.progress').removeClass('active');
+                                $('#needHelp').modal('show');
+                            }
+                            $bar.width(width1 + "%");
+                            width1 = parseInt(width1);
+                            width1 = width1 + 10;
+                        }, 1000);
+                    }, 4000);
+
+
+                }
+
+                function showHint() {
+                    $('.dot').css("visibility", "visible")
+                }
+
+                function bars() {
+                    $('.toolTip').popover('show')
+                    setTimeout(function () {
+                        $('.toolTip').popover('hide')
+                    }, 4000);
+                }
+            </script>
+            <div class="footer visible-lg" style="color: gray">
+                <div class="container">
+                    <p class="navbar-text pull-left">Viva La #Revolucion</p>
+                </div>
+            </div>
     </body>
 
 </html>
